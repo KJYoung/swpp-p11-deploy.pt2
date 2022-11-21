@@ -1,10 +1,9 @@
 # backend/Dockerfile
-FROM python:3.7
+FROM snuspl/swpp:practice11
 
 VOLUME /app
 WORKDIR /app
 
-COPY requirements.txt .
 COPY . .
 
-RUN pip install -r requirements.txt
+ENTRYPOINT ./run_backend.sh
