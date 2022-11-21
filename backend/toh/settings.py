@@ -28,7 +28,7 @@ DEBUG = os.environ.get('DEBUG', 'True') == 'True'                               
 
 ALLOWED_HOSTS = ['127.0.0.1','0.0.0.0', 'localhost', 'ec2-3-34-139-38.ap-northeast-2.compute.amazonaws.com', '3.34.139.38']
 
-# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')                      
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')                      
 SECURE_HSTS_SECONDS = int(os.environ.get('SECURE_HSTS_SECONDS', 31536000))
 SECURE_SSL_REDIRECT = os.environ.get('SECURE_SSL_REDIRECT', 'False') == 'True'                          # default: False
 SESSION_COOKIE_SECURE = os.environ.get('SESSION_COOKIE_SECURE', 'False') == 'True'                      # default: False
@@ -132,3 +132,43 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# CSRF 
+CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ALLOW_CREDENTIALS = True
+
+CSRF_TRUSTED_ORIGINS = (
+    'http://ec2-3-34-139-38.ap-northeast-2.compute.amazonaws.com:3000',
+    'http://3.34.139.38:3000',
+    'https://ec2-3-34-139-38.ap-northeast-2.compute.amazonaws.com:3000',
+    'https://3.34.139.38:3000',
+)
+
+CORS_ORIGIN_WHITELIST = (
+    'http://ec2-3-34-139-38.ap-northeast-2.compute.amazonaws.com:3000',
+    'http://3.34.139.38:3000',
+    'https://ec2-3-34-139-38.ap-northeast-2.compute.amazonaws.com:3000',
+    'https://3.34.139.38:3000',
+)
+
+CORS_ALLOW_HEADERS = (
+    'access-control-allow-credentials',
+    'access-control-allow-origin',
+    'access-control-request-method',
+    'access-control-request-headers',
+    'accept',
+    'accept-encoding',
+    'accept-language',
+    'authorization',
+    'connection',
+    'content-type',
+    'dnt',
+    'credentials',
+    'host',
+    'origin',
+    'user-agent',
+    'X-CSRFToken',
+    'csrftoken',
+    'x-requested-with',
+)
