@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', secret_key_default)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'                                                       # default: True
 
-ALLOWED_HOSTS = ['127.0.0.1','0.0.0.0', 'localhost', 'ec2-3-34-139-38.ap-northeast-2.compute.amazonaws.com', '3.34.139.38']
+ALLOWED_HOSTS = ['127.0.0.1','0.0.0.0', 'localhost', 'ec2-3-38-94-249.ap-northeast-2.compute.amazonaws.com', '3.38.94.249']
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')                      
 SECURE_HSTS_SECONDS = int(os.environ.get('SECURE_HSTS_SECONDS', 31536000))
@@ -139,17 +139,17 @@ CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
 
 CSRF_TRUSTED_ORIGINS = (
-    'http://ec2-3-34-139-38.ap-northeast-2.compute.amazonaws.com:3000',
-    'http://3.34.139.38:3000',
-    'https://ec2-3-34-139-38.ap-northeast-2.compute.amazonaws.com:3000',
-    'https://3.34.139.38:3000',
+    'http://ec2-3-38-94-249.ap-northeast-2.compute.amazonaws.com:3000',
+    'http://3.38.94.249:3000',
+    'https://ec2-3-38-94-249.ap-northeast-2.compute.amazonaws.com:3000',
+    'https://3.38.94.249:3000',
 )
 
 CORS_ORIGIN_WHITELIST = (
-    'http://ec2-3-34-139-38.ap-northeast-2.compute.amazonaws.com:3000',
-    'http://3.34.139.38:3000',
-    'https://ec2-3-34-139-38.ap-northeast-2.compute.amazonaws.com:3000',
-    'https://3.34.139.38:3000',
+    'http://ec2-3-38-94-249.ap-northeast-2.compute.amazonaws.com:3000',
+    'http://3.38.94.249:3000',
+    'https://ec2-3-38-94-249.ap-northeast-2.compute.amazonaws.com:3000',
+    'https://3.38.94.249:3000',
 )
 
 CORS_ALLOW_HEADERS = (
