@@ -28,7 +28,6 @@ DEBUG = os.environ.get('DEBUG', 'True') == 'True'                               
 
 ALLOWED_HOSTS = ['127.0.0.1','0.0.0.0', 'localhost', 'ec2-3-38-94-249.ap-northeast-2.compute.amazonaws.com', '3.38.94.249']
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')                      
 SECURE_HSTS_SECONDS = int(os.environ.get('SECURE_HSTS_SECONDS', 31536000))
 SECURE_SSL_REDIRECT = os.environ.get('SECURE_SSL_REDIRECT', 'False') == 'True'                          # default: False
 SESSION_COOKIE_SECURE = os.environ.get('SESSION_COOKIE_SECURE', 'False') == 'True'                      # default: False
