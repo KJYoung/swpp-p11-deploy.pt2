@@ -6,11 +6,9 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip install -r requirements.txt
-
 # Environment variables for django deployment
 ENV DEBUG=False
-ENV SECRET_KEY=${some_secret_key_over_50_letters}’
+ENV SECRET_KEY=some_secret_key_over_50_letterssadasda5050505050505050sdasdasd
 ENV SECURE_HSTS_SECONDS=31536000
 
 # ENV SECURE_SSL_REDIRECT=True

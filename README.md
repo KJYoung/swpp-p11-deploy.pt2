@@ -29,3 +29,7 @@ sudo docker build -t frontend .
 ```
 ./run_docker_backend.sh
 ```
+
+```
+sudo docker run -d --rm -v /home/ubuntu/swpp-p11-deploy.pt2/backend/db.sqlite3:/app/db.sqlite3 --name backend -p 8000:8000 backend:latest
+```
